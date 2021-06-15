@@ -1,0 +1,489 @@
+/* Global styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+i{
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.md-text{
+    font-size: 15px;
+}
+
+.lg-text{
+    font-size: 40px;
+}
+
+.sm-text{
+    font-size: 12px;
+}
+
+.bar{
+    cursor: pointer;
+    display: none;
+}
+
+.bars{
+    width: 20px;
+    height: 2px;
+    background: #000;
+    margin-top: 2px;
+}
+
+/* To-do-list */
+.wrapper{
+    padding: 10px auto;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 10px 5px 0 0;
+}
+
+.task-panel,.top-header{
+    display: grid;
+    grid-template-columns: 250px auto;
+}
+
+.top-header, .sub-top-header{
+    padding-left: 5px;
+}
+
+.el-icon{
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 3px;
+    color: #fff;
+    background: #000;
+}
+
+.wrapper-function{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.wrapper-function > div{
+    cursor: default;
+    font-size: 22px;
+}
+
+.sub-top-header{
+    margin-top: 10px;
+}
+
+.sub-top-options li{
+    display: inline;
+    text-transform: capitalize;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.left-panel{
+    background: #ccc;
+    height: 100vh;
+}
+
+
+.user-profile{
+    position: relative;
+    padding-top: 15px;
+    padding-left: 10px;
+    width: inherit;
+    height: 45px;
+    display: flex;
+    place-items: center;
+    cursor: pointer;
+}
+
+.user-profile span{
+    margin-right: 5px;
+    font-size:12px;
+    font-weight: 700;
+}
+
+.user-profile span:nth-child(1){
+    background:brown;
+    border-color: brown;
+    padding: 2px;
+}
+
+.user-profile:hover{
+    background: #e0dede;;
+}
+
+
+.click-drop{
+    width: 290px;
+    height: 260px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    position:absolute;
+    top: 50px;
+    z-index: 1;
+    display: none;
+}
+
+.click-drop-container{
+    display: grid;
+    grid-template-rows: 100px 120px 40px;
+}
+
+.click-drop-container > div:nth-child(1){
+    background: #fff;
+}
+
+.click-drop-container > div:nth-child(2),
+.click-drop-container > div:nth-child(3){
+    background: #f5f5f5;
+    color: #f2f2f2;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.click-drop-link{
+    margin-top: 5px;
+    padding: 5px 0 5px 10px;
+}
+
+.click-drop-container > div:nth-child(3) .click-drop-link{
+    margin-top: -5px;
+}
+
+
+.click-drop-container > div:nth-child(3){
+    border: none;
+}
+
+.click-drop-text{
+    border-bottom: 1px solid #d3cdcd;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.user-head{
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    padding-left: 10px;
+}
+
+p.sm-text{
+    padding-left: 10px;
+}
+
+.user-head .el-icon{
+    background: brown;
+    border-color: brown;
+    padding: 5px 10px 5px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.user-head > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+.user-head:hover,
+.click-drop-link:hover,
+.left-panel-settings > div:hover,
+.tasklist-wrapper li:hover,
+.utilities > div:hover,
+.panel-1 h6:hover,
+.panel-1 a:hover,
+.dropdown > div:nth-child(4):hover{
+    background: #e0dede;
+}
+
+.left-panel-settings{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.left-panel-settings > div,
+.tasklist-wrapper li,
+.utilities > div{
+    padding: 5px 0 5px 10px;
+    cursor: pointer;
+}
+
+.tasklist-wrapper,
+.utilities{
+    margin-top: 25px;
+}
+
+.tasklist-wrapper li{
+    margin-top: 10px;
+}
+
+.sp-flex{
+    display: flex;
+    place-items: center;
+    gap: 5px;
+}
+
+.sp-flex img{
+    width: 20px;
+}
+
+/* main panel styling */
+.main-panel{
+    padding: 20px 10px 0 10px;
+    transition: .3s;
+}
+
+.main-panel-head{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.panel-1{
+    display: flex;
+    place-items: center;
+    gap: 10px;
+}
+
+.fa-arrow-right,
+.fa-arrow-left,
+.fa-exclamation-circle{
+    transform:rotate(180deg);
+    cursor: auto;
+}
+
+.rel-tooltip{
+    position: relative;
+}
+
+
+.rel-tooltip:hover .tooltip{
+    visibility: visible;
+}
+
+.tooltip{
+    position: absolute;
+    top: 22px;
+    background: #000;
+    display: flex;
+    gap: 2px;
+    border-radius: 3px;
+    visibility: hidden;
+}
+
+.tooltip > div:nth-child(1){
+    color: #fff;
+}
+
+.tooltip > div:nth-child(2){
+    color: #333;
+}
+
+.tooltiptext{
+    width: 65px;
+    padding: 5px 5px 5px 5px;
+    font-weight: 600;
+}
+
+.rel-tooltip > .tip-2 .tooltiptext{
+    width: 90px;
+    padding: 5px 0 5px 5px;
+}
+
+.panel-1 h6,
+.panel-1 a{
+    padding: 2px 5px 2px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.panel-drops{
+    position: absolute;
+}
+
+/* Main panel sub head */
+.main-panel-subhead,
+.main-panel-properties{
+    padding: 55px 0 0 60px;
+    position: relative;
+}
+
+.main-panel-subhead p{
+    margin-top: 10px;
+    width: 500px;
+}
+
+.d-link{
+    color: #f00000;
+    border-radius: 3px;
+    background: #a2a2a2;
+    padding: 2px 2px 2px 2px;
+    font-size: 10px;
+    font-weight: 200;
+    cursor: context-menu;
+}
+
+.d-link i{
+    cursor: context-menu;
+}
+
+.main-panel-subhead .tooltip{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    place-items: center;
+    position: absolute;
+    top: 20px;
+    background: none;
+}
+
+
+.main-panel-subhead .tooltip a{
+    color: #ccc;
+}
+.main-panel-subhead:hover .tooltip{
+    visibility:visible;
+}
+
+.main-panel-properties{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-gap: 300px;
+    place-items: center;
+}
+
+.dropdown-wrapper{
+    position: relative;
+}
+
+.dropdown{
+    position: absolute;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    border: 1px solid transparent;
+    width: 300px;
+    height:160px;
+    padding: 10px 50px 5px 5px;
+    background:#fff;
+    top: 30px;
+    right: -80px;
+    display: none;
+}
+
+.dropdown-wrapper span{
+    background: #595be7;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 2px 9px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.dropdown-wrapper span:hover{
+    background: #494aac;
+}
+
+.dropdown-wrapper span a{
+    color: #fff;
+}
+
+.dropdown-wrapper span a:hover{
+    background: none;
+}
+
+
+.dropdown-wrapper span i{
+    padding-left: 5px;
+}
+
+.dropdown-wrapper span::before{
+    content: '';
+    position: absolute;
+    left: 45px;
+    transform: rotate(90deg);
+    width: 20px;
+    height: 1px;
+    background: #ccc;
+}
+
+.hr-line{
+    width: 990px;
+    margin-top: 10px;
+    margin-left: 80px;
+    background: #ccc;
+}
+
+.task-container{
+    padding:20px 0 0 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.task-container >div{
+    border: 1px solid #000;
+    height: 300px;
+}
+
+.dropdown-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.dropdown-list i{
+    color: #ccc;
+}
+
+.sp-gap{
+    display: flex;
+}
+
+.sp-gap p:nth-child(2){
+    font-weight: 600;
+}
+
+.dropdown > div:nth-child(3){
+    padding-left: 25px;
+}
+
+.dropdown > div:nth-child(4),
+.dropdown > div:nth-child(4) i{
+    color: rgb(93, 113, 230);
+}
+
+.dropdown > div:nth-child(4){
+    border-top: 1px solid #ccc;
+    padding:10px 20px 10px 15px;
+    width: 293px;
+    cursor: pointer;
+}
+
+
+
+
+

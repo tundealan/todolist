@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-list</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- Material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-header">
+            <div class="logo-area">
+                <span  class="el-icon">N</span>
+                <span>Task List</span>
+            </div>
+            <div class="wrapper-function">
+                <div id="minimize">-</div>
+                <div id="maximize">&#9633</div>
+                <div id="close">x</div>
+            </div>
+        </div>
+
+        <div class="sub-top-header">
+            <ul class="sub-top-options">
+                <li>file</li>
+                <li>edit</li>
+                <li>view</li>
+                <li>window</li>
+                <li>help</li>
+            </ul>
+
+        </div>
+
+
+        <div class="task-panel">
+            <div class="left-panel">
+                <!-- profile details -->
+                <div class="user-profile">
+                    <span class="el-icon">B</span>
+                    <span>Babatunde S.'s Notion</span>
+                    <span><i class="fas fa-sort" id="sortClick"></i></span>
+                    <span><i class="fas fa-angle-double-left" id="close"></i></span>
+
+                    <!--Onclick JavaScript functionality is added
+                    to make it drop down and display the user profile account
+                    settings details-->
+                    <div class="click-drop">
+                        <div class="click-drop-container">
+                            <div class="click-drop-text">
+                                <p class="sm-text">babatundesbaruwa@gmail.com</p>
+                                <div class="user-head">
+                                    <div class="el-icon">B</div>
+                                    <div>
+                                        <div class="md-text">Babatunde S.'s Notion</div>
+                                        <span class="sm-text">Personal Plan</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="click-drop-text">
+                                <div class="click-drop-link"><a href="#">Create work account</a></div>
+                                <div class="click-drop-link"><a href="#">add another account</a></div>
+                                <div class="click-drop-link"><a href="#">log out all</a></div>
+                            </div>
+
+                            <div class="click-drop-text">
+                                <div class="click-drop-link"><a href="#">get iOS & Android app</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- user-head ends here -->
+
+                <div class="left-panel-settings">
+                    <div class="sm-text sp-flex"><i class="fas fa-search"></i> Quick find</div>
+                    <div class="sm-text sp-flex"><i class="fas fa-clock"></i>All updates</div>
+                    <div class="sm-text sp-flex"><i class="fas fa-cog"></i>Settings</div>
+                </div>
+                <!-- Left-panel settings ends here -->
+
+                <div class="tasklist-wrapper">
+                    <ul>
+                        <li class="sm-text sp-flex"><i class="fas fa-caret-right"></i> <i class="fas fa-file"></i>Getting started</li>
+                        <li class="sm-text sp-flex"><i class="fas fa-caret-right"></i> <i class="fas fa-map-pin"></i>Quick notes</li>
+                        <li class="sm-text sp-flex"><i class="fas fa-caret-right"></i> <i class="fas fa-home"></i>Personal home</li>
+                        <li class="sm-text sp-flex"><i class="fas fa-caret-right"></i> <i class="fas fa-check"></i>Task list</li>
+                        <li class="sm-text sp-flex"><i class="fas fa-caret-right"></i> <i class="fas fa-book"></i>Journal</li>
+                        <li class="sm-text sp-flex"><i class="fas fa-caret-right"></i> <i class="fas fa-book"></i>Reading List</li>
+                        <li class="sm-text sp-flex">Add page</li>
+                    </ul>
+                </div>
+                <!-- taslist wrapper ends here -->
+
+                <div class="utilities">
+                    <div class="sm-text sp-flex"><i class="fas fa-chart-pie"></i>Templates</div>
+                    <div class="sm-text sp-flex"><i class="fas fa-download"></i>Import</div>
+                    <div class="sm-text sp-flex"><img src="delete_black_24dp.svg" alt="">Trash</div>
+                </div>
+                <!-- utilities ends here -->
+            </div>
+
+
+            <div class="main-panel">
+                <!-- Main panel head that controls the mainpanel view funtions 
+                used grid system for the layout-->
+                <div class="main-panel-head">
+                    <div class="panel-1">
+                        <div class="bar">
+                            <div class="bars"></div>
+                            <div class="bars"></div>
+                            <div class="bars"></div>
+                        </div>
+                        <!-- Tooltip for the two arrow showing what 
+                        their functionality is about -->
+                        <div class="rel-tooltip"><i class="fas fa-arrow-right"></i>
+                            <div class="tooltip">
+                                <div class="tooltiptext sm-text">Go back</div>
+                                <div class="tooltiptext sm-text">Ctrl+[</div>
+                            </div>
+                        </div>
+                        <div class="rel-tooltip"><i class="fas fa-arrow-left"></i>
+                            <div class="tooltip tip-2">
+                                <div class="tooltiptext sm-text">Go forward</div>
+                                <div class="tooltiptext sm-text">Ctrl+]</div>
+                            </div>
+                        </div>
+                        <h6 class="md-text sp-flex"><i class="fas fa-check"></i>Task List</h6>
+                    </div>
+                    <div class="panel-1">
+                        <a href="#" class="md-text">Share</a>
+                        <a href="#" class="md-text">Updates</a>
+                        <a href="#" class="md-text">Favourite</a>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                <!-- main panel head ends here -->
+
+                <div class="main-panel-subhead">
+                    <!-- A tool tip showing hidden descriptions and 
+                    cover photo option -->
+                    <div class="tooltip md-text">
+                        <a href="#" class="sp-flex"><i class="fas fa-image"></i>Add cover</a>
+                        <a href="#" class="sp-flex"><i class="fas fa-exclamation-circle"></i>Hide description</a>
+                    </div>
+                    <!-- tooltip ends here -->
+                    <div class="lg-text sp-flex"><i class="fas fa-check"></i>Task List</div>
+                    <p class="md-text">
+                        Use this template to track your personal tasks.<br>
+                        Click <a href="#" class="d-link sm-text"><i class="fas fa-cross"></i>New</a>
+                        to create a new task directly on this board.<br>
+                        Click an existing task to add additional context or subtasks.
+                    </p>
+                </div>
+                <!-- main panel subhead ends here -->
+
+                <div class="main-panel-properties">
+                    <div>
+                        <a href="#" class="sp-flex sm-text"><i class="fas fa-cross"></i>Add new</a>
+                    </div>
+                    <div class="panel-1">
+                        <a href="#" class="sm-text" id="age">properties
+                            <div class="panel-drops">hhhhhgg</div>
+                        </a>
+                        <a href="#" class="sm-text">group by status
+                            <div class="panel-drops">hhhhhgg</div>
+                        </a>
+                        <a href="#" class="sm-text">filter
+                            <div class="panel-drops">hhhhhgg</div>
+                        </a>
+                        <a href="#" class="sm-text">sort
+                            <div class="panel-drops">hhhhhgg</div>
+                        </a>
+                        <a href="#" class="sp-flex sm-text"><i class="fas fa-search"></i>Search</a>
+                        <a href="#" class="m-text"><i class="fas fa-ellipsis-h"></i></a>
+                        <div class="dropdown-wrapper">
+                            <span class="sp-flex">
+                                <a href="#">New </a><i class="fas fa-angle-down"></i>
+                            </span>
+                            <div class="dropdown">
+                                <div class="dropdown-list">
+                                    <div class="sp-gap">
+                                        <p class="sm-text">Template for</p>
+                                        <p class="sm-text">Task List</p>
+                                    </div>
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+
+                                <div class="dropdown-list">
+                                    <div class="sp-flex">
+                                        <i class="fas fa-braille"></i>
+                                        <i class="fas fa-file"></i>
+                                        <p class="sm-text">New Task</p>
+                                    </div>
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </div>
+
+                                <div class="dropdown-list">
+                                    <div class="sp-flex">
+                                        <i class="fas fa-file"></i>
+                                        <p class="sm-text">Empty page</p>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown-list">
+                                    <div class="sp-flex">
+                                        <i class="fas fa-plus"></i>
+                                        <p class="sm-text">New Template</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- main panel properties ends here -->
+
+                <hr class="hr-line">
+
+                <!-- task list container -->
+                <div class="task-container">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
